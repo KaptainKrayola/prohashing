@@ -1,0 +1,23 @@
+{
+  "name": "prohashing-wamp",
+  "version": "1.0.0",
+  "description": "simple implemntation of the Prohashing WAMP API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaptainKrayola/prohashing.git"
+  },
+  "author": "Kaptain Krayola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaptainKrayola/prohashing/issues"
+  },
+  "homepage": "https://github.com/KaptainKrayola/prohashing#readme",
+  "dependencies": {
+    "autobahn": "^17.5.1",
+    "ws": "^2.3.1"
+  }
+}
