@@ -4,6 +4,10 @@ Simple implementation of the Prohashing WAMP interface
 ## Installation
 ```npm install prohashing```
 
+## Dependencies
+* Autobahn|JS - https://github.com/crossbario/autobahn-js/
+* ws - https://github.com/websockets/ws
+
 ## Config
 * ```apiKey``` Your Prohashing API Key
 * ```degug``` True or False on whether or not to output debugging information
@@ -12,7 +16,7 @@ Options are : ```['miners', 'profitability', 'systemStatus', 'blocks']``` .  See
 
 ## Usage
 ```javascript
-const prohashing = require("./prohashing")
+const prohashing = require("prohashing")
 const connection = new prohashing({ 
 	apiKey: "0a7a6fade943f7b6b9e96b4d1516bfcc733b5158af18d1b43aeec7e45a238c02", 
 	debug: false ,
@@ -33,7 +37,7 @@ connection.on("block", (block) => {
 	console.log(block)
 })
 
-connection.on("systemStatus", (status)=>{
+connection.on("systemStatus", (status) => {
 	console.log("STATUS", status)
 })
 ```

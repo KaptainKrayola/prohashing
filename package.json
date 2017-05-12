@@ -1,6 +1,6 @@
 {
-  "name": "prohashing-wamp",
-  "version": "1.0.0",
+  "name": "prohashing",
+  "version": "1.0.1",
   "description": "simple implemntation of the Prohashing WAMP API",
   "main": "index.js",
   "scripts": {
