@@ -40,7 +40,7 @@ const prohashing = function (config) {
 
 	self.connectionOpen = (session, details) => {
 		if (self.subscribe.indexOf('miners') > -1 || self.subscribe == "all") wampSession.call('f_all_miner_updates', [self.config.apiKey]).then(self.initialSessionUpdatesReceived)
-		if (self.subscribe.indexOf('profitability') > -1 || self.subscribe == "all") wampSession.call('f_all_profitability_updates', [self.config.apiKey]).then(self.initialProfitabilityUpdatesReceived)
+		if (self.subscribe.indexOf('profitability') > -1 || self.subscribe == "all") wampSession.call('f_all_profitability_updates', []).then(self.initialProfitabilityUpdatesReceived)
 		if (self.subscribe.indexOf('systemStatus') > -1 || self.subscribe == "all") wampSession.call('f_all_general_updates').then(self.initialSystemStatusUpdatesReceived)
 		if (self.subscribe.indexOf('blocks') > -1 || self.subscribe == "all") wampSession.subscribe('found_block_updates', self.onBlockUpdate);
 
