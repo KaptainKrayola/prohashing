@@ -25,7 +25,7 @@ const prohashing = function (config) {
 
 	self.initialSessionUpdatesReceived = (updates) => {
 		self.onMinerUpdate(updates)
-		wampSession.subscribe(`miner_updates_diffs_${self.config.apiKey}`, self.onMinerUpdate)
+		wampSession.subscribe(`miner_update_diffs_${self.config.apiKey}`, self.onMinerUpdate)
 	}
 
 	self.initialProfitabilityUpdatesReceived = (updates) => {
