@@ -29,7 +29,7 @@ const prohashing = function (config) {
 	}
 
 	self.initialBalanceUpdatesReceived = (updates) => {
-		self.onMinerUpdate(updates)
+		self.onBalanceUpdate(updates)
 		wampSession.subscribe(`balance_updates_${self.config.apiKey}`, self.onBalanceUpdate)
 	}
 
