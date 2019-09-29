@@ -28,6 +28,12 @@ connection.on("minerStatus", (update) => {
 	console.log(update)
 })
 
+connection.on("balanceStatus", (update) => {
+	console.log("BALANCE UPDATE")
+   	console.log(update)
+
+})
+
 connection.on("connected", (details, session) => {
 	console.log("Connected to Prohashing WAMP")
 })
