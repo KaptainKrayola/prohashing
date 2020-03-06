@@ -1,4 +1,4 @@
-# prohashing
+# Prohashing JS
 Simple implementation of the Prohashing WAMP interface
 
 ## Installation
@@ -26,6 +26,11 @@ const connection = new prohashing({
 connection.on("minerStatus", (update) => {
 	console.log("MINER UPDATE")
 	console.log(update)
+})
+
+connection.on("balanceStatus", (update) => {
+	console.log("BALANCE UPDATE")
+   	console.log(update)
 })
 
 connection.on("connected", (details, session) => {

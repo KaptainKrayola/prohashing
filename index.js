@@ -23,9 +23,9 @@ const prohashing = function (config) {
 		}
 	}
 
-	self.initialSessionUpdatesReceived = (updates) => {
-		self.onMinerUpdate(updates)
-		wampSession.subscribe(`miner_update_diffs_${self.config.apiKey}`, self.onMinerUpdate)
+	self.initialBalanceUpdatesReceived = (updates) => {
+		self.onBalanceUpdate(updates)
+		wampSession.subscribe(`balance_updates_${self.config.apiKey}`, self.onBalanceUpdate)
 	}
 
 	self.initialProfitabilityUpdatesReceived = (updates) => {
@@ -42,6 +42,7 @@ const prohashing = function (config) {
 		if (self.subscribe.indexOf('miners') > -1 || self.subscribe == "all") wampSession.call('f_all_miner_updates', [self.config.apiKey]).then(self.initialSessionUpdatesReceived)
 		if (self.subscribe.indexOf('profitability') > -1 || self.subscribe == "all") wampSession.call('f_all_profitability_updates').then(self.initialProfitabilityUpdatesReceived)
 		if (self.subscribe.indexOf('systemStatus') > -1 || self.subscribe == "all") wampSession.call('f_all_general_updates').then(self.initialSystemStatusUpdatesReceived)
+		if (self.subscribe.indexOf('balanceStatus') > -1 || self.subscribe == "all") wampSession.call('f_all_balance_updates').then(self.initialBalanceUpdatesReceived)
 		if (self.subscribe.indexOf('blocks') > -1 || self.subscribe == "all") wampSession.subscribe('found_block_updates', self.onBlockUpdate);
 
 		self.emit("connected", session, details)
@@ -53,6 +54,10 @@ const prohashing = function (config) {
 
 	self.onMinerUpdate = (update) => {
 		self.emit("minerStatus", update)
+	}
+
+	self.onBalanceUpdate = (update) => {
+		self.emit("balanceStatus", update)
 	}
 
 	self.onProfitabilityUpdate = (update) => {
