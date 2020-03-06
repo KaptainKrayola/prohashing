@@ -1,4 +1,4 @@
-# Prohashing JS API
+# Prohashing JS
 Simple implementation of the Prohashing WAMP interface
 
 ## Installation
