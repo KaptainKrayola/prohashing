@@ -1,23 +1,60 @@
 {
-  "name": "prohashing",
-  "version": "1.0.4",
-  "description": "simple implemntation of the Prohashing WAMP API",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "prohashing",
+  "_id": "prohashing@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-arRBQVupQV5vsNnLTXxsEGmUimEMqm8g1sFImaAIqh+QYdXNZJRUJHpdBhfzKJBGn4gMV6gIxsU4Zy6hxIYtGw==",
+  "_location": "/prohashing",
+  "_phantomChildren": {
+    "bufferutil": "4.0.3",
+    "cbor": "7.0.3",
+    "crypto-js": "4.0.0",
+    "int64-buffer": "1.0.0",
+    "msgpack-lite": "0.1.26",
+    "tweetnacl": "0.14.5",
+    "utf-8-validate": "5.0.4",
+    "when": "3.7.8",
+    "ws": "7.4.4"
   },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "prohashing",
+    "name": "prohashing",
+    "escapedName": "prohashing",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/prohashing/-/prohashing-1.0.5.tgz",
+  "_shasum": "4546ddedabbdee601df5413830c75ab38831dd8e",
+  "_spec": "prohashing",
+  "_where": "/home/noah/Projects/nrlx",
+  "author": {
+    "name": "Kaptain Krayola"
+  },
+  "bugs": {
+    "url": "https://github.com/KaptainKrayola/prohashing/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "autobahn": "^20.9.2",
+    "ws": "^7.4.4"
+  },
+  "deprecated": false,
+  "description": "simple implemntation of the Prohashing WAMP API",
+  "homepage": "https://github.com/KaptainKrayola/prohashing#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "prohashing",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KaptainKrayola/prohashing.git"
   },
-  "author": "Kaptain Krayola",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KaptainKrayola/prohashing/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/KaptainKrayola/prohashing#readme",
-  "dependencies": {
-    "autobahn": "^17.5.1",
-    "ws": "^7.2.0"
-  }
+  "version": "1.0.6"
 }
